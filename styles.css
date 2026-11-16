@@ -1,0 +1,680 @@
+:root {
+    --purple: #B14DFF;
+    --gold: #E8B86D;
+    --blue: #5B8CFF;
+    --pink: #FF6FAE;
+}
+
+.hero-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--purple);
+    background: var(--surface);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.Hazel{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.Home{
+    display: flex;
+    padding: 80px 80px;
+    gap: 1.2rem;
+    flex-direction: row;
+}
+
+.Home-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: 1rem;
+}
+
+.Home-section .content{
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 600px;
+    color: var(--subtext);
+    line-height: 1.4;
+}
+
+.CTA{
+    display:flex;
+    justify-content: flex-start;
+    gap:1rem;
+
+}
+
+.CTA .btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding: .5rem;
+    white-space:nowrap;
+}
+
+.CTA .btn:hover{
+    background-color: var(--BrushedSilver);
+    color: var(--purple);
+    transform:translateY(-1px)
+    scale(1.02);
+}
+
+.Home-section .logo-container{
+    max-width:500px;
+    width:100%;
+    margin:0 auto;
+    padding:1rem;
+}
+
+.Home-section .logo-container svg{
+    width: 50px;
+    height: 50px;
+}
+/* --- FP Section Styling ---*/
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  margin: 0 0 10px 0;
+  color: var(--text-muted);
+}
+
+.card-content p {
+  font-size: 14px;
+  color: var(--subtext);
+  margin-bottom: 20px;
+}
+
+.heading{
+    display: flex;
+    color: var(--subtext);
+    padding: 1rem;
+    margin: 2rem 0;
+    background: var(--bg);
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;   
+}
+
+.heading h3{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--purple);
+}
+/*================ FP SECTION ===================*/
+.FP .heading h6 a{
+    font-size: .7rem;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.FP .heading h6 a:hover{
+    text-decoration: underline;
+}
+
+.FP .card-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    gap:2rem;
+    padding: 1.5rem;
+}
+
+.FP .card-container .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .1rem;
+    min-height: fit-content;
+    border: 4px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Hover effect: Card lifts up */
+.FP .card-container .card:hover {
+  transform:translateY(-10px)
+  scale(1.02);
+  box-shadow: 0 8px 25px rgb(202, 199, 199);
+}
+
+.FP .card-container .card .thumbnail{
+    width:100%;
+    min-height: fit-content;
+    height:200px;
+    overflow:hidden;
+}
+
+.thumbnail img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.tags{
+    display:flex;
+    gap:.5rem;
+    flex-wrap:wrap;
+    margin:1rem 0;
+}
+
+.tags span{
+    background:var(--purple);
+    color:white;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:.5rem;
+}
+
+.project-btn{
+    display: inline-block;
+    color:var(--purple);
+    font-weight:bold;
+    margin-top:.5rem;
+}
+
+.project-btn:hover{
+    transform:translateX(5px);
+}
+
+/* --- About Section Styling --- */
+.about-section {
+    display: grid;
+    /* Define the column widths here */
+    grid-template-columns: auto auto;
+    
+    /* Define the layout template strings here (wrapped in quotes) */
+    grid-template-areas: 
+        "about-image-container about-text-content";
+        
+    gap: 4rem;
+    padding: 100px 80px;
+}
+
+.about-image-container {
+    background-color: #161326;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.about-text-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.about-bio {
+    color: var(--subtext);
+    font-size: .5rem;
+    line-height: 1.6;
+}
+
+/* Tab Navigation Buttons */
+.about-tabs {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #8c8c9b;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.tab-btn:hover, 
+.tab-btn.active {
+    color: #ffffff;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--purple); 
+    border-radius: 2px;
+}
+
+/* Tab Content Panes */
+.tab-content-container {
+    margin-top: 1rem;
+}
+
+.tab-pane {
+    display: none;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.tab-pane.active {
+    display: flex;
+}
+
+.item-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.item-block .year {
+    font-size: 0.85rem;
+    color: var(--purple);
+    font-weight: 600;
+}
+
+.item-block h4 {
+    font-size: 1.1rem;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.item-block p {
+    font-size: 0.95rem;
+    color: #a0a0ab;
+}
+
+/* SERVICE SECTION STYLING */
+.card-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem 0;
+}
+
+/* THE WHOLE THING THAT MOVES */
+.card-track {
+    display: flex;
+    width: max-content;
+    animation: scrollInfinite 28s linear infinite;
+    will-change: transform;
+}
+
+/* EACH DUPLICATED SET */
+.card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-shrink: 0;
+    padding: 2rem 0;
+}
+
+/* CARDS */
+.service-card {
+    position: relative;
+    isolation: isolate;
+
+    flex: 0 0 350px;
+    height: 350px;
+
+    padding: 30px;
+    border-radius: 16px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    --mouse-x: 50%;
+    --mouse-y: 100%;
+}
+
+/* MOVE EXACTLY ONE SET */
+@keyframes scrollInfinite {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(
+            calc(-50% - 0.75rem)
+        );
+    }
+}
+
+/* PAUSE */
+.card-track:hover .card-track {
+    animation-play-state: paused;
+}
+/* Map halo color variable */
+.service-card[data-color="purple"] {
+    --service-glow: var(--purple);
+}
+
+.service-card[data-color="blue"] {
+    --service-glow: var(--blue);
+}
+
+.service-card[data-color="pink"] {
+    --service-glow: var(--pink);
+}
+
+/* Dynamic Mouse-Following Halo */
+.service-card::before {
+    content: "";
+    position: absolute;
+    /* Position the halo directly under the mouse coordinates */
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    width: 200px;
+    height: 200px;
+    /* Center the blur radius on the exact mouse point */
+    transform: translate(-50%, -50%);
+    background: var(--service-glow);
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0; /* Hidden by default until hovered */
+    z-index: -1;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+    opacity: 0.8; /* Fade in when hovering */
+}
+
+/* SVG and content styling */
+.service-card svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--text);
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.service-category {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--text);
+}
+
+.service-desc {
+    color: var(--subtext);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.FP .heading h6 a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--inter-links);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Contact Page Styling */
+
+.contact-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.contact-section .heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .heading p{
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    padding-top: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--card);
+    padding: .7rem;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: var(--input-bg);
+    border: 2px solid var(--input-border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--input-focus);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--button-bg);
+    color: var(--text);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--button-hover);
+}
+
+.contact-wrapper {
+    margin: auto;
+    padding: 40px 20px;
+    justify-content: space-between;
+}
+
+.contact-wrapper img {
+    width: 300px;
+    height: 300px;
+}
+
+/* --- Social Icons Container --- */
+.social-icon-wrapper {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  /* Ensure icons are vertically aligned */
+
+}
+
+/* Base styles for all anchor links */
+.social-icon-link {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  text-decoration: none;
+  /* Ensure animation starts from the element's original position */
+
+}
+
+/* Base styles for all SVGs */
+.social-icon-svg {
+  width: 100%;
+  height: 100%;
+  /* Use currentColor so the fill matches the link's text color, 
+    which you can change on hover if desired */
+  fill: currentColor; 
+  transition: fill 0.3s ease, filter 0.3s ease;
+}
+
+/* 
+  --- 1. WhatsApp ---
+  Animation: Wiggles once every few seconds like a phone vibration.
+*/
+
+.social-icon-link.whatsapp {
+  color: #25d366; /* Brand Color */
+  animation: whatsapp-vibrate 3s infinite ease-in-out;
+}
+
+@keyframes whatsapp-vibrate {
+  0%, 4%, 8%, 12% { transform: translateX(0); }
+  2%, 6%, 10% { transform: translateX(-2px) rotate(-2deg); }
+  14% { transform: translateX(2px) rotate(2deg); }
+  16% { transform: translateX(0) rotate(0); }
+  /* Pause for 4 seconds (80% of the duration) before repeating */
+}
+
+/* 
+  --- 2. GitHub ---
+  Animation: Gives one tiny bounce.
+*/
+
+.social-icon-link.github {
+  color: #ffffff; /* Brand Color in dark mode */
+  transform: scale(1.7);
+}
+
+.social-icon-link.github:hover {
+  animation: github-bounce 0.5s ease;
+}
+
+@keyframes github-bounce {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-5px); } /* Bounce Up */
+  70% { transform: translateY(2px); }  /* Settle Down */
+}
+
+/* 
+  --- 3. LinkedIn ---
+  Animation: Slides upward about 2px.
+*/
+
+.social-icon-link.linkedin {
+  color: #0077b5; /* Brand Color */
+}
+
+.social-icon-link.linkedin:hover {
+  animation: linkedin-slide 0.3s forwards ease-out;
+}
+
+@keyframes linkedin-slide {
+  100% { transform: translateY(-2px); }
+}
+
+/* 
+  --- 4. YouTube ---
+  Animation: A quick play-button pulse.
+*/
+
+.social-icon-link.youtube {
+  animation: youtube-pulse 1s ease;
+  color: #ff0000; /* Brand Color */
+}
+
+@keyframes youtube-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.5); } /* Slightly larger */
+}
+
+/* 
+  --- 5. Facebook ---
+  Animation: Very subtle glow.
+*/
+
+.social-icon-link.facebook {
+  color: rgb(24, 119, 242); /* Brand Color */
+  transition: filter 0.3s ease-out;
+}
+
+.social-icon-link.facebook:hover {
+  /* Creates a soft, color-matched glow around the icon */
+  filter: drop-shadow(0 0 4px rgb(24, 118, 242));
+}
+
+@media(max-width:900px){
+    .contact-container{
+        flex-direction:column;
+    }
+
+    .about-section{
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "about-image-container"
+        "about-text-content";
+    }
+
+    .FP .card-container {
+        padding: 3rem;
+    }
+
+    .Home{
+        flex-direction:column;
+        text-align:center;
+    }
+}

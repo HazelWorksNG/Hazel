@@ -1,0 +1,27 @@
+
+
+main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.about-container {
+    padding: 50px;
+}
+
+.about-container p:first-of-type {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-container p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--subtext);
+    margin-bottom: 1.5rem;
+}
