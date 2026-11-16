@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HAZEL</title>
+        <link rel="stylesheet" href="css/styles.css"> 
+        <link rel="shortcut icon" href="HAZEL-white.svg">
+        <script type="text/javascript" src="darkmode.js" defer></script>
+        <link rel="stylesheet" href="general.css">
+    </head>
+    <body class="darkmode">
+        <header>
+            <!--Logo-->
+            <div class="Logo">
+                <a href="index.html"><span class="HAZEL">Hazel</span></a>
+            </div>
+           
+            <!--navbar-->
+            <div class="navbar">
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Template Shop</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contacts</a>
+                <!--<a href="Resume.pdf" target="_blank"><button class="btn">Resume 🡻</button></a>----->
+            </div> 
+             <!--Theme Toggle-->
+             <div id="theme"><button id="theme-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M338.5-338.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+            </button></div>
+
+             <!--menubar-->
+            <button class="bar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </header>
+
+
+        
+        <section class="Home">
+            <div class="Home-section">
+                <span class="hero-badge">Premium Delivery</span>
+                <div class="content"><h2 class="Hazel">Hazel</h2> I design websites, digital experiences, and visual campaigns that help brands communicate with <span>clarity and confidence</span>.</div>
+                <div class="CTA">
+                    <a href="contact.html" class="btn">Hire Me</a>
+                    <a href="projects.html" class="btn">View Projects</a>
+                </div>
+            </div>
+            <div class="logo-container"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" viewBox="0 0 1024 1024" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAOlmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAAA5wanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpiMjI2NzUwYy0yMGY1LTQxMGItYjcyYS05ZmMyODUxNDU4MWYAAAADr2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAAMxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaP8yXkFa2PojO58RqMZiNkAAAACAY2JvcqRscmVsYXRpb25zaGlwaHBhcmVudE9maGRjOnRpdGxlZnNvdXJjZWlkYzpmb3JtYXRtaW1hZ2Uvc3ZnK3htbGppbnN0YW5jZUlEeCx4bXA6aWlkOmY1MWEwOTdiLTgyM2EtNDgxNy04MzVlLTgxMDU2OTk4ODJiYwAAAe5qdW1iAAAAQWp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuYWN0aW9ucy52MgAAAAAYYzJzaKF4qEpe0GW9HqvY5ZoZIrMAAAGlY2JvcqFnYWN0aW9uc4KiZmFjdGlvbmtjMnBhLm9wZW5lZGpwYXJhbWV0ZXJzoWtpbmdyZWRpZW50c4GiY3VybHgtc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50LnYzZGhhc2hYIAIlQJEf43Y2ReNFWjn/hQ1P3qvgkZJ1wJwY1DRamW6lpGZhY3Rpb25sYzJwYS5jcmVhdGVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggAiVAkR/jdjZF40VaOf+FDU/eq+CRknXAnBjUNFqZbqVxZGlnaXRhbFNvdXJjZVR5cGV4QWh0dHA6Ly9jdi5pcHRjLm9yZy9uZXdzY29kZXMvZGlnaXRhbHNvdXJjZXR5cGUvY29tcG9zaXRlU3ludGhldGlja2Rlc2NyaXB0aW9ueB9Db21wb3NlZCBpbiB0aGUgUmVjcmFmdCBlZGl0b3IuAAAAxGp1bWIAAABAanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5oYXNoLmRhdGEAAAAAGGMyc2jTJwclyVMtduzJPhXiozidAAAAfGNib3KlamV4Y2x1c2lvbnOBomVzdGFydBjsZmxlbmd0aBkTdGRuYW1lbmp1bWJmIG1hbmlmZXN0Y2FsZ2ZzaGEyNTZkaGFzaFgg7Ex5fvmlvNHoS+P4W0XeWdnIjLL1/bKOjEIQo8m9/HtjcGFkSQAAAAAAAAAAAAAAApZqdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACZ2Nib3Knamluc3RhbmNlSUR4LHhtcDppaWQ6NGJjNDRkZDItYjI2Zi00M2U3LTlmZDYtNTQ5MDc3Nzc2MjEwdGNsYWltX2dlbmVyYXRvcl9pbmZvo2RuYW1lanJlY3JhZnQuYWlndmVyc2lvbngoODFjZTgyZTJjNWMzY2JmYmU4YzZmYmUxNzlkNWY4ZDkxYzQwOWNlMXdvcmcuY29udGVudGF1dGguYzJwYV9yc2YwLjkwLjdpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmIyMjY3NTBjLTIwZjUtNDEwYi1iNzJhLTlmYzI4NTE0NTgxZi9jMnBhLnNpZ25hdHVyZXJjcmVhdGVkX2Fzc2VydGlvbnOComN1cmx4KnNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuYWN0aW9ucy52MmRoYXNoWCAHarv9Qw1thOMncaHcfnkVq9MflqiGXXSZJ+tJzI/m06JjdXJseClzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmhhc2guZGF0YWRoYXNoWCAQe6h6IetzDDdy/o3RKNRqQA0ysDQ0dt2xBT5kd81iHnNnYXRoZXJlZF9hc3NlcnRpb25zgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggAiVAkR/jdjZF40VaOf+FDU/eq+CRknXAnBjUNFqZbqVoZGM6dGl0bGVtUmVjcmFmdCBJbWFnZWNhbGdmc2hhMjU2AAAH3Gp1bWIAAAAoanVtZGMyY3MAEQAQgAAAqgA4m3EDYzJwYS5zaWduYXR1cmUAAAAHrGNib3LShFkDsKIBJhghglkB5zCCAeMwggGJ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</c2pa:manifest></metadata>
+                <path fill="none" d="M0 0L1024 0L1024 1024L0 1024L0 0Z"/>
+                <path fill="#9298A5" d="M466.877 154.788C461.276 154.054 452.031 153.393 446.311 153.716C406.394 155.923 374.949 168.503 347.819 199.073C340.738 207.097 334.777 216.043 330.101 225.669C335.369 224.325 339.302 223.38 344.704 222.472C360.598 202.173 375.163 187.248 399.933 177.048C385.246 189.714 376.932 202.267 369.957 220.324C370.919 220.339 371.979 220.346 373.091 220.354C376.919 220.379 381.365 220.409 384.547 220.772C389.432 211.043 393.171 204.058 400.232 195.751C426.298 165.086 465.407 162.891 500.056 180.217C523.311 191.846 539.333 211.512 548.746 235.565C532.042 218.499 512.953 207.448 488.623 206.914C465.695 206.412 450.618 216.013 437.38 233.583C441.954 235.242 444.334 236.482 448.676 238.672C453.685 233.479 457.511 229.72 463.816 226.013C486.918 212.356 515.177 221.793 533.208 239.556C552.314 258.378 561.284 283.274 561.186 309.836C561.053 345.555 549.263 377.642 529.639 407.159C535.354 365.122 525.901 325.518 500.733 292.068C475.454 258.473 434.71 235.176 395.227 229.975C325.414 220.777 260.27 252.337 231.608 317.626C228.967 323.642 226.701 330.122 223.963 336.089C218.016 344.131 210.948 350.984 204.801 359.091C166.382 409.763 166.118 475.095 167.852 535.791C167.96 539.584 168.084 543.389 168.207 547.201C169.176 577.067 170.161 607.425 164.03 636.836C160.956 652.079 156.824 658.911 152.516 672.386C183.19 648.054 181.945 588.35 181.143 549.889C181.092 547.482 181.044 545.159 181.005 542.932C180.983 541.696 180.962 540.462 180.94 539.23C179.838 476.837 178.802 418.227 217.481 365.678C211.229 399.436 211.048 423.114 211.135 457.353C211.181 475.722 211.569 494.091 211.957 512.454C212.442 535.39 212.926 558.315 212.743 581.218C212.577 602.002 211.959 631.344 208.517 651.442C205.915 666.196 202.01 680.691 196.847 694.755C194.565 700.88 190.714 709.106 188.868 714.929C227.883 687.251 228.321 585.832 225.879 542.405C230.254 558.748 232.419 577.959 233.661 594.845C234.174 601.833 233.942 609.479 234.569 616.266C242.511 585.643 237.163 546.572 232.276 510.871C230.52 498.039 228.823 485.642 227.824 474.23C221.498 401.922 229.439 302.927 298.849 261.755C317.178 250.929 337.75 244.462 358.976 242.854C256.026 279.828 259.376 390.951 262.492 494.332C263.899 541.023 265.259 586.136 256.756 622.124C252.732 639.152 247.783 650.5 241.165 666.548C247.897 661.943 250.195 659.091 254.932 652.382L254.957 690.488C254.957 692.598 254.94 694.718 254.922 696.839C254.896 700.034 254.87 703.233 254.903 706.404C254.981 713.867 253.359 720.83 251.702 727.94C251.158 730.274 250.61 732.624 250.118 735.013C242.775 730.73 232.478 724.342 225.042 720.713L239.322 745.388C230.469 747.819 220.523 750.32 211.855 753.105C218.764 755.915 231.102 758.224 239.206 760.981C234.712 768.708 229.151 777.766 225.278 785.676L249.831 771.493C252.47 781.462 254.783 791.385 257.721 801.272C259.699 792.45 262.209 780.339 264.803 771.88C271.639 775.355 283.675 782.001 290.123 786.159C286.753 780.422 278.306 766.331 275.843 760.658C284.664 758.258 294.743 755.819 303.332 753.088C293.758 750.275 285.118 747.942 275.498 745.408C280.395 737.12 285.172 728.762 289.829 720.337C282.516 724.607 272.017 731.204 264.767 734.894C263.418 729.867 260.474 719.951 260.183 715.031C259.346 699.847 259.475 684.41 259.604 669.056C259.663 662.09 259.721 655.141 259.689 648.24C259.669 644.016 262.147 637.798 264.57 631.717C266.249 627.505 267.901 623.358 268.68 619.984C278.918 575.634 277.517 530.147 276.116 484.662C275.061 450.447 274.007 416.234 277.908 382.508C280.605 359.191 287.281 331.161 298.948 310.777C301.675 306.102 304.664 301.586 307.902 297.249C306.07 302.81 302.809 312.081 301.618 317.49C296.246 341.898 295.566 370.006 295.477 394.962C295.551 420.445 296.027 445.925 296.905 471.393C296.994 474.122 297.085 476.821 297.176 479.494C298.69 524.332 299.955 561.804 287.761 606.605C309.263 584.844 309.674 534.139 309.926 502.961C309.938 501.405 309.951 499.898 309.965 498.446C310.132 481.642 309.647 464.554 309.159 447.362C307.87 401.98 306.562 355.874 317.167 312.355C323.395 286.8 338.151 268.664 361.652 257.312C360.852 267.894 360.233 278.489 359.796 289.092C363.479 286.233 369.255 282.538 372.274 279.873C372.717 272.168 373.317 260.496 375.202 253.188C400.903 246.704 427.518 253.165 449.878 266.613C454.684 269.566 459.338 272.76 463.822 276.183C408.427 257.106 350.283 288.972 332.042 343.356C320.983 376.328 321.135 409.914 322.058 444.287L325.122 529.277C326.039 560.063 326.384 591.735 321.278 622.237C319.215 634.556 314.932 647.854 310.915 659.659C328.198 645.434 334.253 612.123 336.306 590.563C339.526 556.75 338.313 522.652 337.104 488.688C336.815 480.592 336.528 472.503 336.3 464.428C336.243 462.42 336.184 460.397 336.125 458.359C335.246 428.335 334.28 395.305 340.588 366.29C343.975 349.953 350.613 334.465 360.106 320.745C359.345 328.436 359.394 337.016 359.439 344.915C359.443 345.615 359.447 346.31 359.45 346.998C359.5 357.259 359.89 367.599 360.281 377.957C360.931 395.165 361.583 412.423 360.677 429.452C369.437 413.647 369.968 383.645 370.43 357.548C370.652 345.054 370.857 333.455 371.942 324.737C372.681 319.517 372.24 311.207 375.628 306.878C383.349 297.013 398.346 290.912 409.923 287.559C443.255 277.905 481.629 289.178 498.405 321.104C482.002 309.049 466.639 302.274 445.883 305.404C415.674 309.96 394.811 334.493 387.545 363.072C383.333 379.638 383.016 395.972 382.178 412.912C381.221 431.307 380.649 449.642 381.081 468.077C368.815 451.698 359.294 437.714 342.448 424.978C342.548 428.667 342.537 433.612 343.077 437.161C351.254 447.7 355.318 453.431 362.262 464.687C362.575 476.07 362.524 487.88 362.473 499.508C362.455 503.682 362.437 507.834 362.436 511.933L362.413 598.75L362.471 633.342C362.482 650.287 362.48 655.149 358.08 671.625C352.087 668.117 343.223 662.548 337.251 659.568C341.114 666.613 345.123 673.578 349.273 680.459L326.135 687.146C332.729 689.027 342.968 691.639 349.107 693.985C344.997 700.629 341.05 707.867 337.191 714.701C344.393 710.896 351.096 706.788 358.11 702.671C360.147 710.689 362.406 719.375 364.685 727.337C366.926 719.245 368.94 710.892 371.297 702.896C378.118 706.716 385.349 710.94 392.226 714.565C388.21 707.57 384.23 700.555 380.284 693.521C388.072 691.534 395.348 689.305 403.042 687.143C395.749 684.912 387.579 682.629 380.429 680.236C384.54 673.322 388.519 666.33 392.362 659.265C386.002 662.997 377.449 667.706 371.401 671.727C366.825 659.213 366.892 650.337 366.983 638.269C366.995 636.701 367.007 635.08 367.01 633.39L367.033 596.116L367.059 473.654C370.727 478.997 374.203 487.024 377.134 492.956C385.699 510.289 392.096 526.712 404.246 542.12C415.68 556.619 429.831 566.736 443.037 579.613C456.042 592.293 465.382 606.074 477.161 619.72C482.059 625.394 487.359 630.866 492.652 636.33C514.18 658.554 535.574 680.641 529.177 715.631C526.719 729.074 519.528 742.808 511.042 753.418C507.367 758.013 502.581 762.311 498.897 766.756C527.248 751.072 552.628 734.008 562.083 700.931C568.077 679.345 564.067 655.154 553.221 635.814C545.916 622.789 532.461 612.002 521.688 601.938C486.358 569.154 469.243 523.031 498.865 480.262C508.018 467.046 519.106 456.781 529.444 444.341C540.634 430.874 549.331 413.006 564.727 403.727C569.615 400.782 576.066 398.909 581.58 400.428C586.358 401.581 592.307 407.434 594.055 412.022C601.291 431.023 600.227 452.775 599.2 473.768C598.792 482.119 598.389 490.35 598.517 498.24C598.849 518.743 600.321 550.655 616.951 564.885C615.278 559.814 613.795 555.096 612.493 549.886C608.207 532.733 609.795 510.065 611.422 486.851C613.695 454.434 616.041 420.952 602.569 399.933C608.313 402.43 615.123 408.038 618.992 413.025C633.458 431.673 633.809 456.137 634.131 478.592C634.154 480.178 634.177 481.755 634.204 483.319C634.31 489.323 634.08 497.052 633.82 505.806C632.662 544.798 630.901 604.115 655.468 621.805C642.492 587.632 644.095 554.843 645.806 519.842C646.049 514.865 646.295 509.842 646.501 504.764C646.561 503.294 646.624 501.8 646.688 500.285C648.348 460.962 650.599 407.655 609.238 388.433C596.412 382.58 582.615 382.52 569.279 386.561C580.693 373.149 594.845 362.076 613.002 360.509C625.506 359.43 637.195 363.358 646.69 371.528C665.917 388.069 670.631 416.205 672.264 440.249C673.545 459.121 672.95 478.436 672.368 497.362L672.305 499.408C672.201 502.786 672.064 506.479 671.917 510.43C670.265 554.78 667.406 631.556 697.881 658.489C698.298 658.858 698.727 659.213 699.156 659.569C681.334 614.218 682.868 572.284 684.577 525.611C684.823 518.89 685.072 512.07 685.268 505.127C685.385 500.969 685.553 496.579 685.727 492.011C687.573 443.695 690.178 375.527 641.771 352.421C633.948 348.853 626.852 347.945 618.468 347.492C646.682 337.386 681.08 340.677 691.984 372.963C699.22 394.389 699.257 416.765 699.293 438.869C699.295 440.451 699.298 442.031 699.303 443.61C699.323 449.824 699.118 457.508 698.887 466.143C697.673 511.487 695.757 583.087 722.183 606.147C720.53 599.194 718.336 592.129 716.877 585.235C714.056 571.901 712.371 557.479 711.709 543.861C710.918 527.022 710.727 510.161 711.137 493.31C711.26 488.358 711.45 482.928 711.653 477.161C712.901 441.637 714.596 393.357 703.542 365.697C718.18 381.57 725.673 395.079 730.106 416.675C735.92 444.997 734.958 473.857 733.997 502.688C733.511 517.24 733.026 531.784 733.413 546.248C733.751 558.882 734.558 571.014 735.321 583.592C735.443 624.105 735.41 664.63 735.378 705.148C735.369 716.174 735.36 727.199 735.354 738.223C735.351 744.746 733.004 753.179 731.582 759.635C724.54 755.676 717.394 751.025 710.256 747.49C713.8 754.465 718.967 762.138 722.116 768.67C714.454 770.671 706.139 772.678 698.583 774.882C706.62 777.352 714.645 779.24 722.478 781.605C718.299 788.458 714.373 796.13 710.373 802.558C717.464 798.962 724.395 794.552 731.233 791.111C733.73 799.491 735.53 807.98 737.909 816.309C739.677 807.801 742.045 799.633 743.905 791.263C751.041 794.597 758.668 799.096 765.405 803.218C761.873 796.664 756.165 787.596 753.254 781.539C761 779.217 769.151 777.455 776.695 775.096C769.23 772.582 760.851 770.494 753.183 768.432C757.251 761.564 761.661 754.374 765.405 747.368C758.97 750.677 750.573 755.667 744.291 759.501C739.325 745.57 739.59 731.131 739.857 716.556C739.918 713.262 739.979 709.96 739.979 706.656L740 648.498C740.004 645.581 740.023 642.611 740.042 639.615C740.104 629.885 740.168 619.874 739.71 610.468C745.267 628.867 752.598 654.235 769.848 665.092C757.276 635.149 752.419 621.184 749.08 587.242C746.761 563.667 747.084 544.79 747.458 522.985C747.552 517.515 747.649 511.861 747.708 505.902C747.789 497.784 747.961 489.449 748.136 480.967C749.233 427.939 750.448 369.158 730.13 321.652C724.491 308.469 713.392 295.414 701.74 287.382C747.776 302.31 766.337 334.66 776.81 379.272C782.401 402.922 784.847 427.206 784.084 451.496C783.391 466.591 782.067 481.651 780.116 496.636C779.607 500.739 778.95 505.534 778.225 510.818C773.713 543.732 766.592 595.673 776.473 618.209C775.613 592.384 778.318 566.564 784.513 541.479C783.667 576.563 783.27 613.28 789.392 647.94C792.769 667.059 801.883 694.759 815.112 708.716C817.344 711.093 819.857 713.19 822.594 714.962C815.642 700.114 807.712 680.932 804.586 664.565C795.837 618.753 797.095 571.737 798.35 524.835C799.051 498.606 799.752 472.413 798.701 446.487C797.69 421.542 797.181 399.33 791.013 375.079C831.309 419.49 829.994 490.563 828.948 547.118L828.916 548.856L828.903 549.554C828.245 585.228 827.497 625.801 845.782 658.046C847.657 661.352 854.043 670.705 857.632 671.783C857.978 670.259 856.648 667.542 855.531 665.262C855.075 664.33 854.654 663.472 854.398 662.797C842.125 630.455 840.987 596.644 841.738 562.304C841.83 558.106 841.936 553.874 842.043 549.615C843.455 493.379 844.985 432.431 814.636 383.301C811.464 378.167 802.639 365.805 798.15 362.132C786.898 352.924 787.005 352.97 781.026 340.197C779.026 335.853 776.812 331.612 774.392 327.487C757.521 298.262 731.998 278.777 698.903 271.408C670.194 265.016 636.942 269.234 611.956 285.23C595.941 295.483 587.106 306.32 576.855 321.821C582.34 281.891 572.121 233.057 547.525 200.832C527.849 175.354 498.82 158.78 466.877 154.788Z"/>
+                <path fill="var(--bg)" d="M508.832 374.587C507.347 349.641 485.152 318.892 457.428 321.127C430.608 328.036 431.129 360.301 431.685 394.743C432.194 426.259 432.732 459.598 412.378 477C415.72 465.814 418.147 458.87 419.329 447.185C420.563 434.993 419.864 420.765 419.141 406.051C417.722 377.139 416.21 346.357 429.088 325.485C396.753 346.614 396.126 382.358 395.515 417.225C395.408 423.329 395.301 429.407 395.025 435.375C394.186 470.959 396.487 503.475 422.976 530.215C428.647 535.94 439.53 545.963 446.25 550.123C441.038 504.154 459.345 480.585 477.515 457.193C494.402 435.452 511.171 413.864 508.832 374.587Z"/>
+                <path fill="var(--bg)" d="M692.824 298.702C681.271 290.58 667.34 286.54 653.233 287.219C637.881 288.173 626.481 293.091 613.759 301.512C634.172 297.764 649.355 302.422 660.967 320.567C656.014 319.393 652.747 319.822 648.318 318.891C645.757 318.353 639.997 314.404 637.229 313.341C626.468 309.208 614.561 311.887 605.084 317.758C589.766 327.247 582.435 342.839 574.86 358.267C590.033 345.619 605.924 336.507 625.207 331.413C629.24 330.525 632.932 329.802 637.027 329.21C675.681 323.626 715.966 346.867 732.065 382.199C726.961 350.821 720.468 318.471 692.824 298.702Z"/><path d="M587.433 674.314C583.981 666.285 566.995 637.562 558.619 633.734C590.528 691.956 559.884 742.996 506.093 770.18C485.897 780.387 462.35 792.812 444.414 806.511C439.043 810.684 433.865 815.101 428.897 819.747C422.123 826.193 410.427 838.442 402.518 842.415C392.072 847.664 375.871 850.792 364.501 853.948C344.813 859.413 322.794 864.109 303.51 870.365C318.545 870.648 334.27 870.508 349.855 870.369C358.907 870.288 367.912 870.208 376.709 870.211L543.614 870.291L600.115 870.362C603.249 870.372 606.495 870.412 609.774 870.454C616.583 870.539 623.539 870.626 629.948 870.442C624.398 868.822 618.007 867.38 611.319 865.871C577.356 858.209 535.731 848.818 557.673 805.581C552.843 808.796 545.492 814.569 541.002 817.155C513.962 832.727 497.038 842.038 477.416 867.214C489.766 835.263 517.84 824.009 544.718 806.724C588.581 778.516 608.304 722.868 587.433 674.314Z"/><path d="M678.091 684.784C677.328 681.368 675.366 671.4 673.992 668.759C672.746 673.504 671.136 680.375 669.676 684.881C664.513 682.104 660.323 679.401 655.354 676.453C657.596 680.45 661.29 687.459 663.708 691.014C658.475 692.581 653.222 694.079 647.95 695.507C653.163 697.18 658.396 698.789 663.647 700.334C660.776 705.181 658.405 709.309 655.823 714.334C660.812 711.657 664.669 709.494 669.476 706.457C671.196 711.665 672.449 716.376 673.84 721.665C675.494 720.293 677.676 709.506 678.355 706.695C683.533 709.222 687.883 711.84 692.831 714.77C690.207 709.791 687.383 704.929 684.802 700.041C690.134 698.7 695.431 697.225 700.688 695.617C695.655 694.145 689.784 692.268 684.738 691.102C687.443 686.405 690.248 681.714 692.585 676.828L678.091 684.784Z"/>
+                </svg>
+            </div>   
+        </section>
+                
+        <!--Interactive Code /Profile Visual Preview 
+        <div class="hero-visual-card">
+            <div class="code-window">
+                <div class="window-header">
+                    <div class="dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="file-name">hazel.config.js</span>
+                </div>
+                <div class="code-body">
+                    <p><span style="color: var(--purple);">const</span> hazel = &#123;</p>
+                    <p>&nbsp;&nbsp;role: <span style="color: var(--subtext);">"Frontend Developer"</span>,</p>
+                    <p>&nbsp;&nbsp;stack: [<span style="color: var(--subtext);">"HTML"</span>, <span style="color: var(--subtext);">"CSS"</span>, <span style="color: var(--subtext);">"JS"</span>, <span style="color: var(--subtext);">"PHP"</span>],</p>
+                    <p>&nbsp;&nbsp;focus: <span style="color: var(--subtext);">"Clean UI & Performance"</span>,</p>
+                    <p>&nbsp;&nbsp;status: <span style="color: var(--purple);">"Available for projects"</span></p>
+                    <p>&#125;;</p>
+                </div>
+            </div>
+        </div>-->
+
+        <section class="FP" id="FP">
+            <div class="heading">
+                <h3 > Featured Projects</h3>
+                <h6><a href="projects.html">View all   ⇥</a></h6>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="thumbnail">  
+                        <img src="thumbnail/velor.png" alt="Velor">
+                    </div>
+                    <div class="card-content">
+                        <h3>Velor</h3>
+                       <p>
+                            Luxury fragrance campaign designed to communicate elegance and confidence.
+                        </p>
+
+                        <div class="tags">
+                            <span>Branding</span>
+                            <span>Advertising</span>
+                        </div>
+
+                        <a href="#" class="project-btn">
+                            View Project →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="thumbnail">
+                        <img src="thumbnail/velor.png" alt="VeLOR Campaign">
+                    </div>
+
+                    <div class="card-content">
+                        <h3>VeLOR</h3>
+
+                        <p>
+                            Luxury fragrance campaign designed to communicate elegance and confidence.
+                        </p>
+
+                        <div class="tags">
+                            <span>Branding</span>
+                            <span>Advertising</span>
+                        </div>
+
+                        <a href="#" class="project-btn">
+                            View Project →
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="thumbnail">
+                        <img src="thumbnail/velor.png" alt="VeLOR Campaign">
+                    </div>
+
+                    <div class="card-content">
+                        <h3>LodgeList Concept Ad</h3>
+
+                        <p>
+                            Luxury fragrance campaign designed to communicate elegance and confidence.
+                        </p>
+
+                        <div class="tags">
+                            <span>Branding</span>
+                            <span>Advertising</span>
+                            <span>Motion Editing</span>
+                        </div>
+
+                        <a href="#" class="project-btn">
+                            View Project →
+                        </a>
+                    </div>
+            </div>
+        </section>
+        <section class="about-section" id="about-me">
+            <div class="about-image-container">
+                <!-- Replace with your actual image path -->
+                <img src="Hazel.png" alt="Profile Picture" class="about-profile-img">
+            </div>
+            
+            <div class="about-text-content">
+                <h2>About The Creator</h2>
+                <p class="about-bio">
+                    I design and build modern, responsive websites with a focus on clean design, intuitive user experiences, and meaningful interactions. I work with HTML, CSS, JavaScript, and Figma to create websites, user interfaces, and digital branding that help ideas come to life.
+                    I'm constantly learning, improving my craft, and taking on new creative challenges—because every project is a chance to create something better than the last.
+                </p>
+
+                <!-- Tab Navigation Buttons -->
+                <div class="about-tabs">
+                    <button class="tab-btn active" data-target="skills">Skills</button>
+                    <button class="tab-btn" data-target="experience">Experience</button>
+                    <button class="tab-btn" data-target="education">Education</button>
+                </div>
+
+                <!-- Tab Content Panes -->
+                <div class="tab-content-container">
+                    <!-- Skills Content -->
+                    <div class="tab-pane active" id="skills">
+                        <div class="item-block">
+                            <h4>UI/UX Design</h4>
+                            <p>Figma, Adobe XD, Wireframing, User Research</p>
+                        </div>
+                        <div class="item-block">
+                            <h4>Web Development</h4>
+                            <p>HTML5, CSS3, JavaScript, Responsive Design</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Content -->
+                    <div class="tab-pane" id="experience">
+                        <div class="item-block">
+                            <span class="year">2025 - Present</span>
+                            <h4>Freelancer</h4>
+                            <p>Leading digital product design and branding campaigns.</p>
+                        </div>
+                    </div>
+
+                    <!-- Education Content -->
+                    <div class="tab-pane" id="education">
+                        <div class="item-block">
+                            <span class="year">2019-2025</span>
+                            <h4>United Christian Academy</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="heading">
+                <h3>What We Offer</h3>
+                <h6><a href="services.html">All Offers   ➔</a></h6>
+            </div>
+            <div class="card-carousel">
+                <div class="card-track">
+                    <div class="card-container">
+                        <!-- 1. Web Development -->
+                        <div class="service-card" data-color="blue">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                                <line x1="14" y1="4" x2="10" y2="20"></line>
+                            </svg>
+                            <div>
+                                <div class="service-category">Web Development</div>
+                                <p class="service-desc">Responsive, high-performance web solutions built with clean code.</p>
+                            </div>
+                        </div>
+
+                        <!-- 2. Motion Graphics -->
+                        <div class="service-card" data-color="pink">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                <line x1="19" y1="3" x2="19" y2="21" stroke-dasharray="2 2"></line>
+                            </svg>
+                            <div>
+                                <div class="service-category">Motion Graphics</div>
+                                <p class="service-desc">Fluid animations and dynamic visual assets for engaging content.</p>
+                            </div>
+                        </div>
+
+                        <!-- 3. Content & Copywriting -->
+                        <div class="service-card" data-color="purple">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                <path d="M2 2l7.586 7.586"></path>
+                                <circle cx="11" cy="11" r="2"></circle>
+                            </svg>
+                            <div>
+                                <div class="service-category">Content / Copywriting</div>
+                                <p class="service-desc">Compelling messaging and copy designed to capture attention and convert.</p>
+                            </div>
+                        </div>
+
+                        <!-- 4. UI/UX Design -->
+                        <div class="service-card" data-color="blue">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                <path d="M7 8h10"></path>
+                                <path d="M7 12h5"></path>
+                            </svg>
+                            <div>
+                                <div class="service-category">UI/UX Design</div>
+                                <p class="service-desc">Intuitive interfaces and seamless user flows centered around great experiences.</p>
+                            </div>
+                        </div>
+
+                        <!-- 5. Advertising & Digital Campaigns -->
+                        <div class="service-card" data-color="pink">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                            <div>
+                                <div class="service-category">Advertising Campaigns</div>
+                                <p class="service-desc">Strategic digital campaigns targeted to expand reach and drive growth.</p>
+                            </div>
+                        </div>
+
+                        <!-- 6. Branding -->
+                        <div class="service-card" data-color="purple">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                <path d="M2 12h20"></path>
+                            </svg>
+                            <div>
+                                <div class="service-category">Branding</div>
+                                <p class="service-desc">Cohesive visual identities and aesthetic assets that make brands memorable.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div aria-hidden="true" class="card-container">
+                        <!-- 1. Web Development -->
+                        <div class="service-card" data-color="blue">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                                <line x1="14" y1="4" x2="10" y2="20"></line>
+                            </svg>
+                            <div>
+                                <div class="service-category">Web Development</div>
+                                <p class="service-desc">Responsive, high-performance web solutions built with clean code.</p>
+                            </div>
+                        </div>
+
+                        <!-- 2. Motion Graphics -->
+                        <div class="service-card" data-color="pink">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                <line x1="19" y1="3" x2="19" y2="21" stroke-dasharray="2 2"></line>
+                            </svg>
+                            <div>
+                                <div class="service-category">Motion Graphics</div>
+                                <p class="service-desc">Fluid animations and dynamic visual assets for engaging content.</p>
+                            </div>
+                        </div>
+
+                        <!-- 3. Content & Copywriting -->
+                        <div class="service-card" data-color="purple">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                <path d="M2 2l7.586 7.586"></path>
+                                <circle cx="11" cy="11" r="2"></circle>
+                            </svg>
+                            <div>
+                                <div class="service-category">Content / Copywriting</div>
+                                <p class="service-desc">Compelling messaging and copy designed to capture attention and convert.</p>
+                            </div>
+                        </div>
+
+                        <!-- 4. UI/UX Design -->
+                        <div class="service-card" data-color="blue">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                <path d="M7 8h10"></path>
+                                <path d="M7 12h5"></path>
+                            </svg>
+                            <div>
+                                <div class="service-category">UI/UX Design</div>
+                                <p class="service-desc">Intuitive interfaces and seamless user flows centered around great experiences.</p>
+                            </div>
+                        </div>
+
+                        <!-- 5. Advertising & Digital Campaigns -->
+                        <div class="service-card" data-color="pink">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                            <div>
+                                <div class="service-category">Advertising Campaigns</div>
+                                <p class="service-desc">Strategic digital campaigns targeted to expand reach and drive growth.</p>
+                            </div>
+                        </div>
+
+                        <!-- 6. Branding -->
+                        <div class="service-card" data-color="purple">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                <path d="M2 12h20"></path>
+                            </svg>
+                            <div>
+                                <div class="service-category">Branding</div>
+                                <p class="service-desc">Cohesive visual identities and aesthetic assets that make brands memorable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+            <div class="heading">
+                <h3>Let's Work Together</h3>
+                <p>Have a project in mind or want to collaborate? Send a message below.</p>
+            </div>
+            <div class="contact-container">
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent.');">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Hazel">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="hazel@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div class="contact-wrapper">
+                    <img src="Hazel.png" alt="Hazel Logo">
+
+                    <div class="social-icon-wrapper">
+                        
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/message/XJLC6BAM5DPYN1" 
+                            class="social-icon-link whatsapp" 
+                            target="_blank" 
+                            aria-label="Chat with me on WhatsApp">
+                            <svg class="social-icon-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>WhatsApp</title>
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="social-icon-link youtube" target="_blank" aria-label="Visit my YouTube channel">
+                            <svg class="social-icon-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>YouTube</title>
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/yetunde-undefined-35b78b425" 
+                            class="social-icon-link linkedin" 
+                            target="_blank" 
+                            aria-label="Connect with me on LinkedIn">
+                            <svg class="social-icon-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>LinkedIn</title>
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.477-.9 1.637-1.852 3.37-1.852 3.599 0 4.267 2.368 4.267 5.455v6.288zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063s2.063.925 2.063 2.063c0 1.139-.92 2.065-2.063 2.065zm1.782 13H3.555V9h3.564v11zM22 .001H2C.895.001.001.895.001 2v20c0 1 .895 1 .002h20c1 .001 1-.895 1-2V2c0-1-.895-1-2-1z"/>
+                            </svg>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/1DgLTpw7y7/" 
+                            class="social-icon-link facebook" 
+                            target="_blank" 
+                            aria-label="Follow me on Facebook">
+                            <svg class="social-icon-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>Facebook</title>
+                            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.324-.593 1.324-1.326V1.326C24 .593 23.407 0 22.675 0z"/>
+                            </svg>
+                        </a>
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/hazelworksng" 
+                            class="social-icon-link github" 
+                            target="_blank" 
+                            aria-label="View my GitHub repositories">
+                            <svg fill="#000000" height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                            viewBox="0 0 24 24" xml:space="preserve">
+                            <g id="social-github">
+                                <path d="M22.4,6c-1.1-1.8-2.5-3.3-4.4-4.4C16.2,0.5,14.2,0,12,0C9.8,0,7.8,0.5,6,1.6C4.1,2.7,2.7,4.1,1.6,6C0.5,7.8,0,9.8,0,12
+                                    c0,2.6,0.8,5,2.3,7.1c1.5,2.1,3.5,3.5,5.9,4.3c0.3,0.1,0.5,0,0.6-0.1C9,23.2,9,23,9,22.8c0,0,0-0.3,0-0.8c0-0.5,0-1,0-1.4l-0.4,0.1
+                                    c-0.2,0-0.5,0.1-0.9,0.1c-0.3,0-0.7,0-1.1-0.1c-0.4-0.1-0.7-0.2-1-0.5c-0.3-0.2-0.6-0.6-0.7-1l-0.2-0.4c-0.1-0.2-0.3-0.5-0.5-0.8
+                                    c-0.2-0.3-0.5-0.5-0.7-0.6l-0.1-0.1c-0.1-0.1-0.1-0.1-0.2-0.2c-0.1-0.1-0.1-0.1-0.1-0.2c0-0.1,0-0.1,0.1-0.2c0.1,0,0.2-0.1,0.5-0.1
+                                    l0.3,0c0.2,0,0.5,0.2,0.8,0.4c0.3,0.2,0.6,0.5,0.8,0.8c0.2,0.4,0.5,0.8,0.9,1c0.3,0.2,0.7,0.3,1,0.3c0.3,0,0.6,0,0.9-0.1
+                                    C8.6,19.1,8.8,19,9,18.9c0.1-0.7,0.3-1.2,0.8-1.6c-0.6-0.1-1.1-0.2-1.6-0.3c-0.5-0.1-1-0.3-1.5-0.6c-0.5-0.3-0.9-0.6-1.3-1
+                                    c-0.3-0.4-0.6-1-0.8-1.6c-0.2-0.7-0.3-1.5-0.3-2.3c0-1.3,0.4-2.3,1.2-3.2C5.2,7.2,5.2,6.1,5.7,5C6,4.9,6.4,4.9,7,5.2
+                                    c0.6,0.2,1,0.4,1.3,0.6C8.6,5.9,8.8,6.1,9,6.2c1-0.3,2-0.4,3-0.4s2,0.1,3,0.4l0.6-0.4C16,5.6,16.5,5.3,17,5.1
+                                    c0.6-0.2,1-0.3,1.3-0.2c0.5,1.2,0.5,2.2,0.1,3.2c0.8,0.9,1.2,2,1.2,3.2c0,0.9-0.1,1.7-0.3,2.4c-0.2,0.7-0.5,1.2-0.8,1.6
+                                    c-0.3,0.4-0.8,0.8-1.3,1c-0.5,0.3-1,0.5-1.5,0.6c-0.5,0.1-1,0.2-1.6,0.3c0.5,0.5,0.8,1.2,0.8,2.2v3.3c0,0.2,0.1,0.3,0.2,0.5
+                                    c0.1,0.1,0.3,0.2,0.6,0.1c2.4-0.8,4.4-2.2,5.9-4.3C23.2,17,24,14.6,24,12C24,9.8,23.5,7.8,22.4,6z"/>
+                            </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <footer>
+            © Hazel 2026
+            Crafting digital experiences.
+        </footer>
+    </body>
+    <script src="function.js"></script>
+</html>
