@@ -1,32 +1,33 @@
-main{
+/* MAIN LAYOUT */
+main {
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: clamp(4rem, 8vw, 8rem);
 }
 
-section{
+main > section {
     padding: 2rem;
 }
 
 .section-tag {
+    display: inline-block;
     font-size: 0.8rem;
     letter-spacing: 0.2em;
     color: var(--text);
     margin-bottom: 20px;
 }
 
-header{
-    filter: none;
-}
-
+/* HERO */
 .services-hero h1 {
-    font-size: clamp(2.5rem, 3vw, 3.5rem);
-    line-height: 0.95;
-    letter-spacing: -0.01em;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
     margin-bottom: 30px;
 }
 
-span {
+/* IMPORTANT: don't style every span on the website */
+.services-hero h1 span,
+.cta-content h2 span {
     font-style: italic;
     color: var(--purple);
 }
@@ -35,7 +36,7 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-top: 1px solid white;
+    border-top: 1px solid var(--border);
     padding-top: 35px;
     flex-wrap: wrap;
     gap: 30px;
@@ -45,7 +46,7 @@ span {
     font-size: 1.1rem;
     color: var(--text-muted);
     max-width: 500px;
-    line-height: 1.6;
+    line-height: 1.7;
     font-weight: 300;
 }
 
@@ -57,81 +58,116 @@ span {
 
 .pill {
     padding: 8px 16px;
-    background: var(--purple);
+    background: var(--purple-dim);
     border: 1px solid var(--BrushedSilver);
     border-radius: 30px;
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--text);
     letter-spacing: 0.05em;
 }
 
-/* Custom Asymmetric Bento Grid */
+/* BENTO GRID */
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto auto);
-    grid-template-areas: 
-    "card-large card-small"
-    "card-medium card-medium ";
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    grid-template-areas:
+        "large large small small"
+        "large large medium1 medium2";
+
+    grid-auto-rows: minmax(260px, auto);
     gap: 1.5rem;
 }
 
+.card-large {
+    grid-area: large;
+}
+
+.card-small {
+    grid-area: small;
+}
+
+.card-medium-1 {
+    grid-area: medium1;
+}
+
+.card-medium-2 {
+    grid-area: medium2;
+}
+
 .bento-card {
-    border: 1px solid var(--BrushedSilver);
+    position: relative;
+    min-width: 0;
+    min-height: 280px;
+    border: 1px solid var(--border);
     border-radius: 20px;
-    padding: 1rem;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: clamp(1.25rem, 2vw, 2rem);
+
     display: flex;
-    border: 1px solid var(--border-hover);
     flex-direction: column;
     justify-content: space-between;
-    max-height: 600px;
+    gap: 2rem;
+
+    transition:
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .bento-card:hover {
-    border-color: var(--text);
-    background: var(--purple);
-    transform: translateY(-4px);
-    box-shadow: 0 0 15px var(--purple);
+    border-color: var(--BrushedSilver);
+    background: var(--surface);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px var(--purple-dim);
 }
 
-/* Card Content Styling */
+/* CARD ICONS */
+.card-header-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
 
 .card-icon-box {
     width: 48px;
     height: 48px;
     background: var(--bg);
+    border: 1px solid var(--border);
     border-radius: 12px;
-    color: var(--text);
-    right: 10px;
-    top: 30px;
-    padding: 8px;
-    position: absolute;
-    font-size: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--BrushedSilver);
+    font-size: 1.35rem;
 }
 
+/* CARD CONTENT */
 .card-title {
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 1.05;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 400;
+    line-height: 1.1;
     margin-bottom: 15px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .card-desc {
-    color: var(--subtext);
+    color: var(--text-muted);
     font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    line-height: 1.7;
+    margin-bottom: 20px;
     font-weight: 300;
 }
 
 .card-deliverables {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
+    gap: 14px;
+
     border-top: 1px solid var(--border);
-    padding-top: 25px;
+    padding-top: 22px;
 }
 
 .card-deliverables li {
@@ -139,7 +175,7 @@ span {
     color: var(--text);
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .card-deliverables li i {
@@ -147,43 +183,51 @@ span {
     color: var(--BrushedSilver);
 }
 
-/* Interactive visual previews embedded inside bento cards */
+/* WEB DEVELOPMENT PREVIEW */
 .card-visual-preview {
-    margin: 25px 0px;
+    margin: 25px 0;
     background: var(--bg);
+    border: 1px solid var(--border);
     border-radius: 12px;
-    padding: .7rem;
+    padding: 1.2rem;
 }
 
-/* Interactive Code snippet preview for Dev card */
 .code-mockup {
     font-family: monospace;
     font-size: 0.75rem;
     color: var(--text-muted);
-    line-height: 1.5;
-    opacity: 0.85;
+    line-height: 1.8;
+    opacity: 0.9;
 }
-.code-mockup .tag { color: var(--purple); }
-.code-mockup .attr { color: var(--BrushedSilver); }
-.code-mockup .string { color: var(--MidnightNavy); }
 
-/* Process Section - Less generic horizontal timeline */
+.code-mockup .tag {
+    color: var(--purple);
+}
 
+.code-mockup .attr {
+    color: var(--BrushedSilver);
+}
+
+.code-mockup .string {
+    color: var(--text-muted);
+}
+
+/* WORKFLOW */
 .section-header-center {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
 
 .section-header-center h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 400;
     margin-top: 15px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.03em;
 }
 
 .process-timeline {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
 }
 
@@ -192,8 +236,6 @@ span {
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 35px 25px;
-    position: relative;
-    z-index: 2;
     transition: all 0.3s ease;
 }
 
@@ -203,17 +245,19 @@ span {
 }
 
 .step-number-indicator {
-    width: 70px;
-    height: 70px;
-    background: var(--bg);
+    width: 60px;
+    height: 60px;
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 50%;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    margin: 0 auto 25px auto;
-    box-shadow: 0 0 20px var(--purple);
+
+    font-size: 1.5rem;
+    margin: 0 auto 25px;
+    box-shadow: 0 0 20px var(--purple-dim);
 }
 
 .step-title {
@@ -221,63 +265,63 @@ span {
     font-weight: 600;
     margin-bottom: 10px;
     text-align: center;
-    letter-spacing: 0.02em;
 }
 
 .step-desc {
     font-size: 0.85rem;
     color: var(--text-muted);
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.7;
     font-weight: 300;
 }
 
-/* Selected Work Mini Strip */
-
+/* SELECTED WORK */
 .strip-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    gap: 20px;
 }
 
 .strip-header h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 400;
 }
 
 .view-all-link {
     color: var(--text);
     font-size: 0.9rem;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .view-all-link:hover {
     color: var(--purple);
-    text-decoration: underline;
 }
 
 .work-preview-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
 
 .work-card-preview {
     min-height: 350px;
     border-radius: 16px;
-    border: 1px solid black;
+    border: 1px solid var(--border);
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 30px;
+
+    transition: all 0.4s ease;
 }
 
 .work-card-preview:hover {
     transform: translateY(-6px);
-    border-color: var(--border-hover);
+    border-color: var(--BrushedSilver);
 }
 
 .work-card-content {
@@ -298,59 +342,145 @@ span {
     font-weight: 400;
 }
 
-/* Call To Action Banner */
+/* CTA */
 .cta-banner {
-    background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+    background: linear-gradient(
+        135deg,
+        var(--bg) 0%,
+        var(--surface) 100%
+    );
+
     border: 1px solid var(--border);
     border-radius: 24px;
-    padding: 80px 60px;
+    padding: clamp(35px, 6vw, 80px);
+
     margin-bottom: 30px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), inset 0 0 40px var(--purple-dim);
+    gap: 40px;
+
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
 }
 
 .cta-content h2 {
-    font-size: clamp(3rem, 4.5vw, 4.5rem);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 400;
     line-height: 1.05;
     margin-bottom: 15px;
 }
 
-.cta-content h2 span {
-    font-style: italic;
-    color: var(--purple);
-}
-
 .cta-content p {
-    color: var(--text);
+    color: var(--text-muted);
     font-size: 1.05rem;
     font-weight: 300;
     max-width: 500px;
+    line-height: 1.7;
 }
 
 .cta-button {
     display: inline-flex;
     align-items: center;
     gap: 15px;
+
     background: var(--text);
     color: var(--bg);
+
     padding: 18px 36px;
     border-radius: 40px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.3s ease;
     white-space: nowrap;
 }
 
 .cta-button:hover {
     background: var(--purple);
     color: var(--PureWhite);
-    transform: scale(1.03);
-    box-shadow: 0 15px 35px var(--purple);
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "large large"
+            "small medium1"
+            "medium2 medium2";
+    }
+
+    .process-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .work-preview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cta-banner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    main > section {
+        padding: 1rem;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "large"
+            "small"
+            "medium1"
+            "medium2";
+    }
+
+    .bento-card {
+        min-height: 280px;
+    }
+
+    .process-timeline,
+    .work-preview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .strip-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .cta-banner {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-deliverables {
+        grid-template-columns: 1fr;
+    }
+
+    .capability-pills {
+        gap: 8px;
+    }
+
+    .pill {
+        font-size: 0.75rem;
+    }
+
+    .work-card-preview {
+        min-height: 280px;
+    }
 }
 
 .social-links {
@@ -398,25 +528,5 @@ span {
     }
     .container {
         padding: 130px 20px 80px 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    nav {
-        display: none;
-    }
-    .process-timeline {
-        grid-template-columns: 1fr;
-    }
-    .hero-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-    footer {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-        padding: 40px 20px;
     }
 }
