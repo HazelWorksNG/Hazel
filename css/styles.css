@@ -334,7 +334,7 @@
     flex-direction: row;
     gap: 1.5rem;
     flex-shrink: 0;
-    padding: 2rem 0;
+    padding: 2rem 1.5rem 2rem 0;
 }
 
 /* CARDS */
@@ -368,14 +368,12 @@
     }
 
     to {
-        transform: translateX(
-            calc(-50% - 0.75rem)
-        );
+        transform: translateX(-50%);
     }
 }
 
 /* PAUSE */
-.card-track:hover .card-track {
+.card-track:hover {
     animation-play-state: paused;
 }
 /* Map halo color variable */
