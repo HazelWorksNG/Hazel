@@ -177,20 +177,72 @@ header{
     justify-content: space-between;
 }
 
-.navbar a{
-    font-size: .5rem;
-    color: var(--text-secondary);
+
+/* NAVIGATION LINKS */
+
+.navbar a {
+    position: relative;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    margin-right: 1.2rem;
-    transition: ease-in .2s;
-    border-bottom: 3px solid;
+
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    padding: 0.75rem 0.9rem;
+    margin-right: 0.3rem;
+
+    border: none;
+    border-radius: 8px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
 }
 
-.navbar a:hover,
-.navbar a.active{
-    transform: translateY(-5px);
+/* HOVER */
+.navbar a:hover {
+    color: var(--text);
+    background: var(--purple-dim);
+    transform: translateY(-2px);
 }
+
+/* ACTIVE LINK */
+.navbar a.active {
+    color: var(--text);
+    background: var(--purple-dim);
+}
+
+/* ANIMATED UNDERLINE */
+.navbar a::after {
+    content: "";
+    position: absolute;
+
+    width: 20px;
+    height: 2px;
+
+    background: var(--purple);
+    border-radius: 10px;
+
+    bottom: 4px;
+    left: 50%;
+
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.3s ease;
+}
+
+/* REVEAL UNDERLINE */
+.navbar a:hover::after,
+.navbar a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
 
 #theme-toggle{
     height: 50px;
@@ -244,7 +296,7 @@ header{
 }
 
 .btn::before {
-    content: "😘";
+    content: "";
     position: absolute;
     left: 50%;
     bottom: -100px;
