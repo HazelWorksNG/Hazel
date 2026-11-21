@@ -1,159 +1,113 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>HAZEL</title>
-        <link rel="stylesheet" href="css/products.css"> 
-        <link rel="shortcut icon" href="HAZEL-white.svg">
-        <script type="text/javascript" src="darkmode.js" defer></script>
-        <link rel="stylesheet" href="general.css">
-    </head>
-    <body class="darkmode">
-        <header>
-            <!--Logo-->
-            <div class="Logo">
-                <a href="index.html"><span class="HAZEL">Hazel</span></a>
-            </div>
-           
-            <!--navbar-->
-            <div class="navbar">
-                <a href="index.html">Home</a>
-                <a href="Template Shop" class="active">Templates</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contacts</a>
-                <!--<a href="Resume.pdf" target="_blank"><button class="btn">Resume 🡻</button></a>----->
-            </div> 
-             <!--Theme Toggle-->
-            <div id="theme"><button id="theme-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M338.5-338.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-            </button></div>
-
-             <!--menubar-->
-            <button class="bar-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </header>
-
-        <!-- Main Shop Section -->
-        <main class="shop-container">
-            <section class="shop-hero">
-                <h1 class="HAZEL" style="font-size: 3rem; margin-bottom: 1rem;">Template Store</h1>
-                <p style="color: var(--subtext); max-width: 500px; font-size: 0.95rem;">Handcrafted website layouts built for speed, responsiveness, and clean design. Click any template to view live demos, file contents, and licensing options.</p>
-            </section>
-
-            <!-- Product Grid -->
-            <div class="products-grid">
-                <!-- CAFÉ Product Card -->
-                <div class="product-card" onclick="openModal('cafeModal')">
-                    <div class="product-thumbnail">
-                        <i class="fa-solid fa-mug-hot" style="font-size: 2.5rem; color: var(--purple);"></i>
-                    </div>
-                    <div class="product-details">
-                        <span style="font-size: 0.75rem; color: var(--subtext); text-transform: uppercase; letter-spacing: 0.1em;">Restaurant Template</span>
-                        <h3 style="font-size: 1.8rem; margin: 5px 0 10px 0;">CAFÉ</h3>
-                        <p style="color: var(--subtext); font-size: 0.85rem; margin-bottom: 20px;">A warm, responsive website for cafés, restaurants and food brands.</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--subtext); opacity: 0.8; padding-top: 15px;">
-                            <span style="font-weight: bold; color: var(--purple);">From ₦5,000</span>
-                            <span class="btn" style="font-size: 0.8rem;">Inspect Template</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- Interactive Popover Modal for CAFÉ -->
-        <div class="modal-overlay" id="cafeModal">
-            <div class="modal-container">
-                <button class="modal-close" onclick="closeModal('cafeModal')">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <span style="font-size: 0.75rem; color: var(--purple); text-transform: uppercase; letter-spacing: 0.15em;">Restaurant Website Template</span>
-                    <h2 style="font-size: 2.5rem; margin: 5px 0;">CAFÉ</h2>
-                    <p style="color: var(--subtext); font-size: 0.9rem; margin-bottom: 20px;">A warm, responsive website for cafés, restaurants and food brands.</p>
-                    <a href="#" target="_blank" class="btn" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; font-weight: bold;">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> LIVE DEMO
-                    </a>
-                </div>
-
-                <hr class="modal-divider">
-
-                <!-- PREVIEW SECTION -->
-                <div class="modal-section">
-                    <h4 style="color: var(--purple); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px;">Preview</h4>
-                    
-                    <div class="preview-box">
-                        <span style="font-size: 0.7rem; color: var(--subtext); display: block; margin-bottom: 8px; font-weight: bold;">DESKTOP</span>
-                        <div class="desktop-mockup">
-                            <h4 class="HAZEL" style="font-size: 1.8rem;">Artisan Coffee & Kitchen</h4>
-                            <p style="font-size: 0.75rem; color: var(--subtext);">Freshly roasted daily. Experience warmth in every cup.</p>
-                        </div>
-                    </div>
-
-                    <div class="preview-box" style="text-align: center;">
-                        <span style="font-size: 0.7rem; color: var(--subtext); display: block; margin-bottom: 8px; font-weight: bold;">MOBILE</span>
-                        <div class="phone-mockup">
-                            <div style="font-size: 0.7rem; font-weight: bold;">CAFÉ Mobile View</div>
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="modal-divider">
-
-                <!-- WHAT'S INCLUDED -->
-                <div class="modal-section">
-                    <h4 style="color: var(--purple); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px;">What's Included</h4>
-                    <ul class="included-list">
-                        <li>✓ HTML</li>
-                        <li>✓ CSS</li>
-                        <li>✓ JavaScript</li>
-                        <li>✓ Responsive layout</li>
-                        <li>✓ Cart interface</li>
-                        <li>✓ Menu system</li>
-                        <li>✓ Documentation</li>
-                    </ul>
-                </div>
-
-                <hr class="modal-divider">
-
-                <!-- LICENSE & BUY -->
-                <div class="modal-section">
-                    <h4 style="color: var(--purple); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px;">License</h4>
-                    
-                    <div class="license-grid">
-                        <label class="license-option">
-                            <input type="radio" name="cafeLicense" value="personal" checked>
-                            <span>Personal <b>₦5,000</b></span>
-                        </label>
-                        <label class="license-option">
-                            <input type="radio" name="cafeLicense" value="commercial">
-                            <span>Commercial <b>₦12,000</b></span>
-                        </label>
-                    </div>
-
-                    <button class="btn" style="width: 100%; padding: 12px; font-size: 1rem; font-weight: bold; margin-top: 15px;" onclick="handleBuy()">
-                        BUY NOW
-                    </button>
-                </div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </html> 
+    <title>HAZEL</title>
+    <link rel="stylesheet" href="css/products.css"> 
+    <link rel="shortcut icon" href="HAZEL-white.svg">
+    <script type="text/javascript" src="darkmode.js" defer></script>
+    <link rel="stylesheet" href="general.css">
+</head>
+<body class="darkmode">
+    <header>
+        <!--Logo-->
+        <div class="Logo">
+            <a href="index.html"><span class="HAZEL">Hazel</span></a>
         </div>
+        
+        <!--navbar-->
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="Template Shop" class="active">Templates</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contacts</a>
+            <!--<a href="Resume.pdf" target="_blank"><button class="btn">Resume 🡻</button></a>----->
+        </div> 
+            <!--Theme Toggle-->
+        <div id="theme"><button id="theme-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M338.5-338.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        </button></div>
 
-    <!-- Footer -->
+            <!--menubar-->
+        <button class="bar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <main class="shop-container">
+
+        <section class="shop-hero">
+            <span class="shop-eyebrow">THE HAZEL COLLECTION</span>
+            <h1 class="HAZEL">Template Store</h1>
+            <p>
+                Thoughtfully crafted digital experiences,
+                ready to make your next idea happen.
+            </p>
+        </section>
+
+        <section class="shop-toolbar">
+            <div class="shop-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="search"
+                    id="product-search"
+                    placeholder="Find a template..."
+                >
+            </div>
+
+            <select id="category-filter">
+                <option value="all">All categories</option>
+                <option value="commerce">Commerce</option>
+                <option value="portfolio">Portfolio</option>
+                <option value="business">Business</option>
+                <option value="favorites">Favorites</option>
+            </select>
+
+            <select id="sort-products">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to high</option>
+                <option value="price-high">Price: High to low</option>
+                <option value="name">Name: A–Z</option>
+            </select>
+        </section>
+
+        <section class="catalogue-section">
+            <div class="catalogue-heading">
+                <div>
+                    <h2>Explore templates</h2>
+                    <p id="product-count">Loading templates...</p>
+                </div>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+                <!-- JavaScript generates product cards here -->
+            </div>
+
+            <div id="empty-products" class="empty-products" hidden>
+                <i class="fa-regular fa-folder-open"></i>
+                <h3>No templates found</h3>
+                <p>Try another search or category.</p>
+            </div>
+        </section>
+
+    </main>
+
     <footer>
         © Hazel 2026
         Crafting digital experiences.
     </footer>
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/supabase.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/shop.js"></script>
-    <script src="js/function.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/products.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/function.js"></script>
 </body>
 </html>
