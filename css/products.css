@@ -80,6 +80,38 @@
     font-size: .85rem;
 }
 
+.category-filters {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 25px 0 60px;
+}
+
+.category-btn {
+    padding: 15px 35px;
+    min-width: 125px;
+    border: 1px solid #dedede;
+    border-radius: 17px;
+    background: #fff;
+    color: #555;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.category-btn:hover {
+    border-color: #e2a5b0;
+}
+
+.category-btn.active {
+    background: #e91e46;
+    border-color: #e91e46;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(233, 30, 70, 0.15);
+}
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));

@@ -228,4 +228,4 @@ categoryFilter.addEventListener("change", renderProducts);
 sortSelect.addEventListener("change", renderProducts);
 
 // INITIALIZE
-renderProducts();
+loadProducts();

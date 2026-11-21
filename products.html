@@ -42,14 +42,32 @@
     </header>
 
     <main class="shop-container">
-
         <section class="shop-hero">
-            <span class="shop-eyebrow">THE HAZEL COLLECTION</span>
-            <h1 class="HAZEL">Template Store</h1>
-            <p>
-                Thoughtfully crafted digital experiences,
-                ready to make your next idea happen.
-            </p>
+            <div class="shop-hero-content">
+                <span class="shop-eyebrow">
+                    THE HAZEL COLLECTION / 001
+                </span>
+
+                <h1>
+                    Ideas need
+                    <span>a starting point.</span>
+                </h1>
+
+                <p>
+                    Thoughtfully crafted digital templates and creative
+                    resources to help turn your next idea into something real.
+                </p>
+
+                <a href="#catalogue" class="shop-hero-link">
+                    Explore the collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="shop-hero-art" aria-hidden="true">
+                <span class="shop-hero-star">✦</span>
+                <span class="shop-art-label">CREATIVITY / WITHOUT LIMITS</span>
+                <span class="shop-art-index">H.001</span>
+            </div>
         </section>
 
         <section class="shop-toolbar">
@@ -62,13 +80,17 @@
                 >
             </div>
 
-            <select id="category-filter">
-                <option value="all">All categories</option>
-                <option value="commerce">Commerce</option>
-                <option value="portfolio">Portfolio</option>
-                <option value="business">Business</option>
-                <option value="favorites">Favorites</option>
-            </select>
+            <div class="category-filters" id="category-filters">
+                <button class="category-btn active" data-category="all">
+                    All
+                </button>
+                <button class="category-btn" data-category="restaurant">
+                    Restaurant
+                </button>
+                <button class="category-btn" data-category="favorites">
+                    Favorites
+                </button>
+            </div>
 
             <select id="sort-products">
                 <option value="featured">Featured</option>
@@ -78,7 +100,7 @@
             </select>
         </section>
 
-        <section class="catalogue-section">
+        <section class="catalogue-section" id="catalogue">
             <div class="catalogue-heading">
                 <div>
                     <h2>Explore templates</h2>
@@ -108,6 +130,6 @@
 <script src="js/supabase.js"></script>
 <script src="js/products.js"></script>
 <script src="js/shop.js"></script>
-<script src="js/function.js"></script>
+<script src="function.js"></script>
 </body>
 </html>
